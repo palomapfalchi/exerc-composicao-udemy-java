@@ -69,7 +69,7 @@ public class Worker {
         contracts.remove(contract);
     }
 
-    public void income(int year, int month) {
+    public double income(int year, int month) {
         //adiciona o salario base na soma
         double sum = baseSalary;
         //instancia o calendario com a data do contrato
@@ -82,6 +82,6 @@ public class Worker {
             if (year == c_year && month == c_month) {
                 sum += c.totalValue();
             }
-        }
+        } return sum;
     }
 }
